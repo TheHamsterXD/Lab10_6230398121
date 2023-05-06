@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<tittle> Lab10_6230398121 </tittle>
+<head>
+<link rel="stylesheet" href=https://unpkg.com/leaflet@1.9.3/dist/leaflet.css integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="crossorigin=""/>
+<script src=https://unpkg.com/leaflet@1.9.3/dist/leaflet.js integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+</head>
+<body>
+<div id="map" style="height: 600px"></div>
+<script>
+	var map = L.map('map').setView([13.7563, 100.5018], 10);
+	L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+	var marker = L.marker([13.8810, 100.5781]).addTo(map);
+	marker.bindPopup("<b>Chula Hospital</b>").openPopup();
+	var greenIcon = L.icon({
+	iconUrl: 'pic/chula_hospital.jpg',
+		iconSize:     [120, 90], // size of the icon
+		iconAnchor:   [0, 115], // point of the icon which will correspond to marker's location
+		popupAnchor:  [0, -39] // point from which the popup should open relative to the iconAnchor		
+		});
+	L.marker([13.8810, 100.5781], {icon: greenIcon}).addTo(map).bindPopup("<b>Chula Hospital</b>");
+	
+	var marker = L.marker([13.730455, 100.508644]).addTo(map);
+	marker.bindPopup("<b>Taksin Hospital</b>").openPopup();
+	var greenIcon = L.icon({
+	iconUrl: 'pic/Taksin Hospital.jpg',
+		iconSize:     [120, 90], // size of the icon
+		iconAnchor:   [0, 115], // point of the icon which will correspond to marker's location
+		popupAnchor:  [0, -39] // point from which the popup should open relative to the iconAnchor		
+		});
+	L.marker([13.730455, 100.508644], {icon: greenIcon}).addTo(map).bindPopup("<b>Taksin Hospital</b>");
+	
+	var marker = L.marker([13.694388, 100.494648]).addTo(map);
+	marker.bindPopup("<b>Charoen Krung Pracharak Hospital</b>").openPopup();
+	var greenIcon = L.icon({
+	iconUrl: 'pic/003.jpg',
+		iconSize:     [90, 120], // size of the icon
+		iconAnchor:   [85, 145], // point of the icon which will correspond to marker's location
+		popupAnchor:  [0, -39] // point from which the popup should open relative to the iconAnchor		
+		});
+	L.marker([13.694388, 100.494648], {icon: greenIcon}).addTo(map).bindPopup("<b>Charoen Krung Pracharak Hospital</b>");
+	
+	var marker = L.marker([13.857659625457028, 100.85926179204371]).addTo(map);
+	marker.bindPopup("<b>Wetchakarunrasm Hospital</b>").openPopup();
+	var greenIcon = L.icon({
+	iconUrl: 'pic/Wetchakarunrasm Hospital.jpg',
+		iconSize:     [100, 100], // size of the icon
+		iconAnchor:   [0, 125], // point of the icon which will correspond to marker's location
+		popupAnchor:  [0, -39] // point from which the popup should open relative to the iconAnchor		
+		});
+	L.marker([13.857659625457028, 100.85926179204371], {icon: greenIcon}).addTo(map).bindPopup("<b>Wetchakarunrasm Hospital</b>");	
+	
+	
+	var marker = L.marker([13.73179216471081, 100.36687561534063]).addTo(map);
+	marker.bindPopup("<b>Ratchaphiphat Hospital</b>").openPopup();
+	var greenIcon = L.icon({
+	iconUrl: 'pic/โรงพยาบาลราชพิพัฒน์.jpg',
+		iconSize:     [120, 90], // size of the icon
+		iconAnchor:   [120, 115], // point of the icon which will correspond to marker's location
+		popupAnchor:  [0, -39] // point from which the popup should open relative to the iconAnchor		
+		});
+	L.marker([13.73179216471081, 100.36687561534063], {icon: greenIcon}).addTo(map).bindPopup("<b>Ratchaphiphat Hospital</b>");	
+</script>
+</body>
+</html>
